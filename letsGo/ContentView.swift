@@ -13,36 +13,34 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-                EllipticalGradient(colors:[Color.pink, Color.orange], center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadiusFraction: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, endRadiusFraction: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                    .ignoresSafeArea()
-                VStack {
-                    List(viewModel.reviews) { review in
-                        VStack(alignment: .leading) {
-                            Text(review.title)
-                            
-                                .font(.headline)
-                            Text(review.content)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
+            VStack {
+                List(viewModel.reviews) { review in
+                    VStack(alignment: .leading) {
+                        if let image = review.image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 200)
+                        }
+                        Text(review.title)
+                            .font(.headline)
+                        Text(review.content)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                }
+                .navigationTitle("Travel Reviews")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            showingAddReview.toggle()
+                        }) {
+                            Label("Add Review", systemImage: "plus")
                         }
                     }
-                    
-                    
-                    .navigationTitle("travel reviews")
-                    
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: {
-                                showingAddReview.toggle()
-                            }) {
-                                Label("Add Review", systemImage: "square.and.pencil.circle")
-                            }
-                        }
-                    }
-                    .sheet(isPresented: $showingAddReview) {
-                        AddReviewView(viewModel: viewModel)
-                    }
+                }
+                .sheet(isPresented: $showingAddReview) {
+                    AddReviewView(viewModel: viewModel)
                 }
             }
         }

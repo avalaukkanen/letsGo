@@ -17,6 +17,7 @@
 		EA3954632C5AC74700C790A0 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3954622C5AC74700C790A0 /* AddReviewView.swift */; };
 		EA3954652C5AC77500C790A0 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3954642C5AC77500C790A0 /* Review.swift */; };
 		EA3954672C5AC78A00C790A0 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3954662C5AC78A00C790A0 /* ReviewViewModel.swift */; };
+		EA3954692C5ADECE00C790A0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3954682C5ADECE00C790A0 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		EA3954622C5AC74700C790A0 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
 		EA3954642C5AC77500C790A0 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		EA3954662C5AC78A00C790A0 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		EA3954682C5ADECE00C790A0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		EA39542C2C5AC6F400C790A0 = {
 			isa = PBXGroup;
 			children = (
+				EA3954682C5ADECE00C790A0 /* ImagePicker.swift */,
 				EA3954372C5AC6F400C790A0 /* letsGo */,
 				EA3954482C5AC6F500C790A0 /* letsGoTests */,
 				EA3954522C5AC6F500C790A0 /* letsGoUITests */,
@@ -269,6 +272,7 @@
 				EA39543B2C5AC6F400C790A0 /* ContentView.swift in Sources */,
 				EA3954652C5AC77500C790A0 /* Review.swift in Sources */,
 				EA3954392C5AC6F400C790A0 /* letsGoApp.swift in Sources */,
+				EA3954692C5ADECE00C790A0 /* ImagePicker.swift in Sources */,
 				EA3954632C5AC74700C790A0 /* AddReviewView.swift in Sources */,
 				EA3954672C5AC78A00C790A0 /* ReviewViewModel.swift in Sources */,
 			);

@@ -19,8 +19,8 @@ class ReviewViewModel: ObservableObject {
         loadReviews()
     }
     
-    func addReview(title: String, content: String) {
-        let newReview = Review(title: title, content: content)
+    func addReview(title: String, content: String, image: UIImage? = nil) {
+        let newReview = Review(title: title, content: content, image: image)
         reviews.append(newReview)
     }
     
